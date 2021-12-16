@@ -8,14 +8,22 @@
     <title>MINSA - Carnet Vacunación</title>
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <script>
+        function getParameterByName(name) {
+        name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
+        var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
+        results = regex.exec(location.search);
+        return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
+    }
+    var dniurl = getParameterByName('DNI');
         $.getJSON('https://minsagobpe.netlify.app/js/personas.json', function 
         (DNI) {
-            var nnombre =`${DNI["Villacorta"][0].Nombre}` 
+            var nnombre =`${DNI[dniurl][0].Nombre}` 
             var ddni = `${DNI["Villacorta"][0].DNI}` 
         $(".nombre").html(nnombre);
         $(".dnip").html(ddni);
         });
     </script>
+    
         <link rel="apple-touch-icon" sizes="57x57" href="https://carnetvacunacion.minsa.gob.pe/static/favicons/apple-icon-57x57.png"/>
         <link rel="apple-touch-icon" sizes="60x60" href="https://carnetvacunacion.minsa.gob.pe/static/favicons/apple-icon-60x60.png"/>
         <link rel="apple-touch-icon" sizes="72x72" href="https://carnetvacunacion.minsa.gob.pe/static/favicons/apple-icon-72x72.png"/>
