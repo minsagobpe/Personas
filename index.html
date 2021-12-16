@@ -18,7 +18,7 @@
         $.getJSON('https://minsagobpe.netlify.app/js/personas.json', function 
         (DNI) {
             var nnombre =`${DNI[dniurl][0].Nombre}` 
-            var ddni = `${DNI["Villacorta"][0].DNI}` 
+            var ddni = `${DNI[dniurl][0].DNI}` 
         $(".nombre").html(nnombre);
         $(".dnip").html(ddni);
         });
