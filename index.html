@@ -11,10 +11,6 @@
     
     <link rel="stylesheet" href="style.css">
     <title>MINSA - Carnet Vacunación</title>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.9-1/core.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.9-1/md5.js"></script>
-    
-    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <script>
         function getParameterByName(name) {
         name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
@@ -22,8 +18,7 @@
         results = regex.exec(location.search);
         return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
     }
-    var dnimd5 = getParameterByName('DNI');
-    var dniurl = CryptoJS.MD5(dnimd5).toString();
+    var dniurl = getParameterByName('DNI');
         $.getJSON('https://minsagobpe.netlify.app/js/personas.json', function 
         (DNI) {
             var nnombre =`${DNI[dniurl][0].Nombre}` 
