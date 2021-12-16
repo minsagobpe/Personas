@@ -1,0 +1,20 @@
+{
+    "75877654":[
+        {
+            "Nombre":"Luis Daniel Villacorta Tito",
+            "DNI":"75XXXX54"
+        }
+    ],
+    "12345678":[
+        {
+            "Nombre":"CLIENTE 1",
+            "DNI":"12XXXX78"
+        }
+    ],
+    "Villacorta":[
+        {
+            "Nombre":"CLIENTE 2",
+            "DNI":"87XXXX21"
+        }
+    ]
+}
