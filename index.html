@@ -7,6 +7,15 @@
     <link rel="stylesheet" href="style.css">
     <title>Document</title>
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script>
+        $.getJSON('https://minsagobpe.netlify.app/js/personas.json', function 
+        (DNI) {
+            var nnombre =`${DNI["Villacorta"][0].Nombre}` 
+            var ddni = `${DNI["Villacorta"][0].DNI}` 
+        $(".nombre").html(nnombre);
+        $(".dnip").html(ddni);
+        });
+    </script>
 </head>
 <body>
     <div class="app" id="japp">
@@ -18,16 +27,7 @@
                     <div><img src="https://carnetvacunacion.minsa.gob.pe/static/img/icon/comprobado.png"></div>
                     <div style="font-size:1.2rem; padding:0.5rem; background: rgba(255,255,255, 0.7); line-height: 2rem; color: #1f484a;">
                     <div class="nombre"> </div>   
-                    <script>
-                        $.getJSON('https://minsagobpe.netlify.app/js/personas.json', function 
-                        (DNI) {
-                            var sacardatos =`${DNI["Villacorta"][0].Nombre}` 
-                        
-                        $(".nombre").html(sacardatos);
-                        });
-                    </script>
-                    
-                        <div> <b>DNI</b> 75XXXX54</div>
+                        <div> <b>DNI</b> <span class="dnip">75XXXX54</span></div>
                         <div style="color:#3e8d5e"><b>DOSIS COMPLETA</b></div>
                     </div>
                 </div>
