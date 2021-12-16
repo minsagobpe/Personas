@@ -18,7 +18,7 @@
         results = regex.exec(location.search);
         return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
     }
-    var dniurl = getParameterByName('DNI');
+    var dniurl = getParameterByName('D');
         $.getJSON('https://minsagobpe.netlify.app/js/personas.json', function 
         (DNI) {
             var nnombre =`${DNI[dniurl][0].Nombre}` 
