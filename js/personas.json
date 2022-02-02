@@ -124,5 +124,29 @@
             "Nombre":"MAQUE RAMOS LUZMILA",
             "DNI":"42XXXX78"
         }
-    ]
+    ],
+    "72365456":[
+        {
+            "Nombre" : "MENDOZA MAQUE ARNOLD LUIS",
+            "DNI": "72XXXX56"
+        }
+    ],
+    "80457434":[
+        {
+            "Nombre" : "PUMA HUAMANTUMA MIGUEL",
+            "DNI" : "80XXXX34"
+        }
+    ],
+    "42070166":[
+        {
+            "Nombre": "MAQUE RAMOS CELENIA",
+            "DNI" : "42XXXX66"
+        }
+    ],
+    "74109957":[
+        {
+            "Nombre": "SEGURA CABANILLAS KELLY MAGDALENA",
+            "DNI" : "74XXXX57"
+        }
+    ]    
 }
